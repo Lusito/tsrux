@@ -17,6 +17,13 @@ export type ReducerMap<TState, TAction extends AnyAction> = {
 };
 
 /**
+ * Infer actions of a reducer map.. For internal use.
+ */
+export type ReducerMapActions<TReducerMap> = TReducerMap extends ReducerMap<any, infer TAction>
+    ? TAction | AnyAction
+    : never;
+
+/**
  * A callback used to create a reducer for one single action.
  *
  * @param actionCreator The action creator is used to determine the action type.
@@ -36,7 +43,7 @@ export type ReducerMapHandler<TState> = <TAction extends AnyAction>(
 export function mapReducers<TState, TReducerMap extends ReducerMap<TState, any>>(
     defaultState: TState | undefined,
     setup: (handle: ReducerMapHandler<TState>) => TReducerMap[]
-): Reducer<TState | undefined, TReducerMap extends ReducerMap<any, infer T> ? T : never> {
+): (state: TState | undefined, action: ReducerMapActions<TReducerMap>) => TState {
     const map = Object.assign({}, ...setup((actionCreator, reducer) => ({ [actionCreator.type]: reducer } as any)));
     // eslint-disable-next-line @typescript-eslint/default-param-last
     return (state = defaultState, action) => {
