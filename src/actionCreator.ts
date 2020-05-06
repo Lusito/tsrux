@@ -48,10 +48,11 @@ export function actionCreator<TType extends string, TParams extends any[], TPayl
     getPayload?: (...args: TParams) => TPayload,
     getMeta?: (...args: TParams) => TMeta
 ): ActionCreator<TType, Action<TType, TPayload, TMeta>, TParams> {
-    const creator = (...args: TParams) => ({
-        type,
-        payload: getPayload?.(...args),
-        meta: getMeta?.(...args),
-    });
+    const creator = (...args: TParams) => {
+        const action: { type: TType; payload?: TPayload; meta?: TMeta } = { type };
+        if (getPayload) action.payload = getPayload(...args);
+        if (getMeta) action.meta = getMeta(...args);
+        return action;
+    };
     return Object.assign(creator as any, { type });
 }
