@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { expectType } from "tsd";
 
-import { actionCreator, Action, ActionCreator } from "./actionCreator";
+import { actionCreator, Action, ActionCreator, AnyAction, ActionOf } from "./actionCreator";
 
 interface TestPayload {
     foo: string;
@@ -29,6 +29,13 @@ expectType<{ type: "foo/bar/3"; meta: TestMeta }>(placeholder as Action3);
 expectType<{ type: "foo/bar/4"; payload: TestPayload; meta: TestMeta }>(placeholder as Action4);
 
 /**
+ * Type AnyAction should work correctly
+ */
+expectType<Action<string> | Action<string, any> | Action<string, any, any> | Action<string, undefined, any>>(
+    placeholder as AnyAction
+);
+
+/**
  * Type ActionCreator should work correctly
  */
 type ActionCreator1 = ActionCreator<"foo/bar/1", Action1, []>;
@@ -40,6 +47,14 @@ expectType<{ type: "foo/bar/1" } & (() => Action1)>(placeholder as ActionCreator
 expectType<{ type: "foo/bar/2" } & ((x: string, y: number) => Action2)>(placeholder as ActionCreator2);
 expectType<{ type: "foo/bar/3" } & ((x: string, y: number) => Action3)>(placeholder as ActionCreator3);
 expectType<{ type: "foo/bar/4" } & ((x: string, y: number) => Action4)>(placeholder as ActionCreator4);
+
+/**
+ * Type ActionOf should work correctly
+ */
+expectType<Action1>(placeholder as ActionOf<ActionCreator1>);
+expectType<Action2>(placeholder as ActionOf<ActionCreator2>);
+expectType<Action3>(placeholder as ActionOf<ActionCreator3>);
+expectType<Action4>(placeholder as ActionOf<ActionCreator4>);
 
 /**
  * Function actionCreator should work
