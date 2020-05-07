@@ -28,7 +28,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rimraf dist && tsc",
+    "build": "rimraf dist && tsc -p tsconfig-build.json",
     "lint": "npm run lint:es && npm run lint:package && npm run lint:style",
     "lint:es": "eslint src/**/*.{ts,tsx} --ext .ts,.tsx --ignore-path .prettierignore",
     "lint:es:fix": "npm run lint:es -- --fix",
