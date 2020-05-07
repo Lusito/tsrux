@@ -6,6 +6,10 @@
 [![Stars](https://badgen.net/github/stars/lusito/tsrux)](https://github.com/lusito/tsrux)
 [![Watchers](https://badgen.net/github/watchers/lusito/tsrux)](https://github.com/lusito/tsrux)
 
+|Master|[![Build Status](https://travis-ci.org/Lusito/tsrux.svg?branch=master)](https://travis-ci.org/Lusito/tsrux)|[![Code Coverage](https://coveralls.io/repos/github/Lusito/tsrux/badge.svg?branch=master)](https://coveralls.io/github/Lusito/tsrux)|
+|---|---|---|
+|Develop|[![Build Status](https://travis-ci.org/Lusito/tsrux.svg?branch=develop)](https://travis-ci.org/Lusito/tsrux)|[![Code Coverage](https://coveralls.io/repos/github/Lusito/tsrux/badge.svg?branch=develop)](https://coveralls.io/github/Lusito/tsrux)|
+
 tsrux stands for typesafe [redux](https://redux.js.org/), aside from the bloody obvious: TypeScript Rocks!
 This package is heavily inspired by [deox](https://github.com/thebrodmann/deox), but uses a more lightweight approach.
 
@@ -18,6 +22,7 @@ It doesn't even require [redux](https://redux.js.org/)!
 - Very lightweight (see the badges above for the latest size).
 - Deadsimple to use
 - No dependencies!
+- Automated [unit- and type tests](https://travis-ci.org/Lusito/tsrux) with 100% [code coverage](https://coveralls.io/github/Lusito/tsrux)
 - Liberal license: [zlib/libpng](https://github.com/Lusito/tsrux/blob/master/LICENSE)
 
 ### Installation via NPM

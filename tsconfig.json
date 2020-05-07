@@ -9,5 +9,5 @@
     "allowSyntheticDefaultImports": true,
     "target": "es6"
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/*.ts"]
 }
