@@ -1,25 +1,21 @@
 # tsrux
 
-[![Minified + gzipped size](https://badgen.net/bundlephobia/minzip/tsrux)](https://www.npmjs.com/package/tsrux)
-[![NPM version](https://badgen.net/npm/v/tsrux)](https://www.npmjs.com/package/tsrux)
-[![License](https://badgen.net/github/license/lusito/tsrux)](https://github.com/lusito/tsrux/blob/master/LICENSE)
-[![Stars](https://badgen.net/github/stars/lusito/tsrux)](https://github.com/lusito/tsrux)
-[![Watchers](https://badgen.net/github/watchers/lusito/tsrux)](https://github.com/lusito/tsrux)
-
-|Master|[![Build Status](https://travis-ci.org/Lusito/tsrux.svg?branch=master)](https://travis-ci.org/Lusito/tsrux)|[![Code Coverage](https://coveralls.io/repos/github/Lusito/tsrux/badge.svg?branch=master)](https://coveralls.io/github/Lusito/tsrux)|
-|---|---|---|
-|Develop|[![Build Status](https://travis-ci.org/Lusito/tsrux.svg?branch=develop)](https://travis-ci.org/Lusito/tsrux)|[![Code Coverage](https://coveralls.io/repos/github/Lusito/tsrux/badge.svg?branch=develop)](https://coveralls.io/github/Lusito/tsrux)|
+[![Build Status](https://flat.badgen.net/travis/lusito/tsrux/master?icon=travis&label=tests)](https://travis-ci.org/Lusito/tsrux)
+[![Code Coverage](https://flat.badgen.net/coveralls/c/github/Lusito/tsrux/master?icon=codecov)](https://coveralls.io/github/Lusito/tsrux)
+[![License](https://flat.badgen.net/github/license/lusito/tsrux?icon=github)](https://github.com/lusito/tsrux/blob/master/LICENSE)
+[![Minified + gzipped size](https://flat.badgen.net/bundlephobia/minzip/tsrux?icon=dockbit)](https://bundlephobia.com/result?p=tsrux)
+[![NPM version](https://flat.badgen.net/npm/v/tsrux?icon=npm)](https://www.npmjs.com/package/tsrux)
+[![Stars](https://flat.badgen.net/github/stars/lusito/tsrux?icon=github)](https://github.com/lusito/tsrux)
+[![Watchers](https://flat.badgen.net/github/watchers/lusito/tsrux?icon=github)](https://github.com/lusito/tsrux)
 
 tsrux stands for typesafe [redux](https://redux.js.org/), aside from the bloody obvious: TypeScript Rocks!
 This package is heavily inspired by [deox](https://github.com/thebrodmann/deox), but uses a more lightweight approach.
 
 `tsrux` enables you to reduce the boilerplate code you usually write to define your action creators, reducers, etc.
 
-It doesn't even require [redux](https://redux.js.org/)!
-
 #### Why use tsrux
 
-- Very lightweight (see the badges above for the latest size).
+- Extremely lightweight: 300 byte vs 7.7 kilobyte for [deox](https://bundlephobia.com/result?p=deox).
 - Deadsimple to use
 - No dependencies!
 - Automated [unit- and type tests](https://travis-ci.org/Lusito/tsrux) with 100% [code coverage](https://coveralls.io/github/Lusito/tsrux)
