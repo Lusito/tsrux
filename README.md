@@ -8,10 +8,9 @@
 [![Stars](https://flat.badgen.net/github/stars/lusito/tsrux?icon=github)](https://github.com/lusito/tsrux)
 [![Watchers](https://flat.badgen.net/github/watchers/lusito/tsrux?icon=github)](https://github.com/lusito/tsrux)
 
-tsrux stands for typesafe [redux](https://redux.js.org/), aside from the bloody obvious: TypeScript Rocks!
-This package is heavily inspired by [deox](https://github.com/thebrodmann/deox), but uses a more lightweight approach.
+tsrux enables you to reduce the boilerplate code you usually write to define your action creators, reducers, etc. and even gain type-safety in the process!
 
-`tsrux` enables you to reduce the boilerplate code you usually write to define your action creators, reducers, etc.
+The name stands for typesafe [redux](https://redux.js.org/), aside from the bloody obvious: TypeScript Rocks!
 
 #### Why use tsrux
 
@@ -23,7 +22,9 @@ This package is heavily inspired by [deox](https://github.com/thebrodmann/deox),
 
 ### Installation via NPM
 
-```npm i tsrux```
+```
+npm i tsrux
+```
 
 This library is shipped as es2015 modules. To use them in browsers, you'll have to transpile them using webpack or similar, which you probably already do.
 
@@ -122,6 +123,13 @@ type AddTodoAction = ActionOf<typeof addTodo>;
     - [redux-dynamic-modules](https://www.npmjs.com/package/redux-dynamic-modules), an awesome library if you are planning to modularize your code.
 - That's it?
   - Yup, there is nothing more to it.
+
+### Similar Projects
+This package is heavily inspired by [deox](https://github.com/thebrodmann/deox), but uses a more lightweight approach.
+
+Aside from that, there are [redux-actions](https://github.com/redux-utilities/redux-actions) and [typesafe-actions](https://github.com/piotrwitek/typesafe-actions).
+
+
 
 ### Report issues
 
