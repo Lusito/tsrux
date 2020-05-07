@@ -3,25 +3,25 @@ import { expectType } from "tsd";
 
 import { actionCreator, Action, ActionCreator, AnyAction, ActionOf } from "./actionCreator";
 
-interface TestPayload {
+export interface TestPayload {
     foo: string;
     bar: number;
 }
 
-interface TestMeta {
+export interface TestMeta {
     hello: string;
     world: number;
 }
 
-const placeholder = {} as any;
+export const placeholder = {} as any;
 
 /**
  * Type Action should work correctly
  */
-type Action1 = Action<"foo/bar/1">;
-type Action2 = Action<"foo/bar/2", TestPayload>;
-type Action3 = Action<"foo/bar/3", undefined, TestMeta>;
-type Action4 = Action<"foo/bar/4", TestPayload, TestMeta>;
+export type Action1 = Action<"foo/bar/1">;
+export type Action2 = Action<"foo/bar/2", TestPayload>;
+export type Action3 = Action<"foo/bar/3", undefined, TestMeta>;
+export type Action4 = Action<"foo/bar/4", TestPayload, TestMeta>;
 
 expectType<{ type: "foo/bar/1" }>(placeholder as Action1);
 expectType<{ type: "foo/bar/2"; payload: TestPayload }>(placeholder as Action2);
@@ -38,10 +38,10 @@ expectType<Action<string> | Action<string, any> | Action<string, any, any> | Act
 /**
  * Type ActionCreator should work correctly
  */
-type ActionCreator1 = ActionCreator<"foo/bar/1", Action1, []>;
-type ActionCreator2 = ActionCreator<"foo/bar/2", Action2, [string, number]>;
-type ActionCreator3 = ActionCreator<"foo/bar/3", Action3, [string, number]>;
-type ActionCreator4 = ActionCreator<"foo/bar/4", Action4, [string, number]>;
+export type ActionCreator1 = ActionCreator<"foo/bar/1", Action1, []>;
+export type ActionCreator2 = ActionCreator<"foo/bar/2", Action2, [string, number]>;
+export type ActionCreator3 = ActionCreator<"foo/bar/3", Action3, [string, number]>;
+export type ActionCreator4 = ActionCreator<"foo/bar/4", Action4, [string, number]>;
 
 expectType<{ type: "foo/bar/1" } & (() => Action1)>(placeholder as ActionCreator1);
 expectType<{ type: "foo/bar/2" } & ((x: string, y: number) => Action2)>(placeholder as ActionCreator2);
@@ -59,10 +59,13 @@ expectType<Action4>(placeholder as ActionOf<ActionCreator4>);
 /**
  * Function actionCreator should work
  */
-const actionCreator1 = actionCreator("foo/bar/1");
-const actionCreator2 = actionCreator("foo/bar/2", (foo: string, bar: number) => ({ foo, bar }));
-const actionCreator3 = actionCreator("foo/bar/3", undefined, (hello: string, world: number) => ({ hello, world }));
-const actionCreator4 = actionCreator(
+export const actionCreator1 = actionCreator("foo/bar/1");
+export const actionCreator2 = actionCreator("foo/bar/2", (foo: string, bar: number) => ({ foo, bar }));
+export const actionCreator3 = actionCreator("foo/bar/3", undefined, (hello: string, world: number) => ({
+    hello,
+    world,
+}));
+export const actionCreator4 = actionCreator(
     "foo/bar/4",
     (foo: string, bar: number) => ({ foo, bar }),
     (hello: string, world: number) => ({ hello, world })
