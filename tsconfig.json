@@ -9,5 +9,6 @@
     "allowSyntheticDefaultImports": true,
     "target": "es6"
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/*.ts"],
+  "exclude": ["./src/*.spec.ts", "./src/*.spec-d.ts"]
 }
