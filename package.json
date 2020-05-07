@@ -31,7 +31,8 @@
     "lint:style:base": "prettier src/**/*.{ts,tsx,js,json} ./*.{ts,tsx,js,json}",
     "lint:style:fix": "npm run lint:style:base -- --write",
     "test": "jest --watch",
-    "test:ci": "jest --coverage"
+    "test:ci": "jest --coverage && tsd",
+    "test:tsd": "tsd"
   },
   "devDependencies": {
     "@lusito/eslint-config-react": "^1.0.4",
@@ -41,6 +42,10 @@
     "rimraf": "^3.0.2",
     "sort-package-json": "^1.42.1",
     "ts-jest": "^25.5.0",
+    "tsd": "^0.11.0",
     "typescript": "^3.8.3"
+  },
+  "tsd": {
+    "directory": "src"
   }
 }
