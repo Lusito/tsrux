@@ -12,7 +12,15 @@
     "deox",
     "typesafe-actions"
   ],
-  "license": "ZLib",
+  "homepage": "https://github.com/lusito/tsrux",
+  "bugs": {
+    "url": "https://github.com/lusito/tsrux/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lusito/tsrux.git"
+  },
+  "license": "Zlib",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
