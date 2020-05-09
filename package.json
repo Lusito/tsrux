@@ -1,6 +1,6 @@
 {
   "name": "tsrux",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "tsrux stands for typesafe redux. It reduces boilerplate redux code.",
   "keywords": [
     "TypeScript",
