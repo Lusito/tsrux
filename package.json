@@ -31,8 +31,8 @@
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig-build.json",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs",
     "lint": "npm run lint:es && npm run lint:package && npm run lint:style",
     "lint:es": "eslint src/**/*.{ts,tsx} --ext .ts,.tsx --ignore-path .prettierignore",
     "lint:es:fix": "npm run lint:es -- --fix",
