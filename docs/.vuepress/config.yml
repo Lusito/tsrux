@@ -1,0 +1,18 @@
+title: tsrux
+description: Typesafe and painless action creators and reducers for redux.
+themeConfig:
+  nav:
+  - link: 'https://github.com/lusito/tsrux'
+    text: Github
+  - link: 'https://www.npmjs.com/package/tsrux'
+    text: NPM
+  sidebar:
+  - '/setup'
+  - '/action-creators'
+  - '/reducers'
+  - '/types'
+  - '/further-examples'
+  displayAllHeaders: true
+plugins:
+- fulltext-search
+  

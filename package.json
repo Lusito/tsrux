@@ -31,6 +31,8 @@
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig-build.json",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
     "lint": "npm run lint:es && npm run lint:package && npm run lint:style",
     "lint:es": "eslint src/**/*.{ts,tsx} --ext .ts,.tsx --ignore-path .prettierignore",
     "lint:es:fix": "npm run lint:es -- --fix",
@@ -54,7 +56,9 @@
     "sort-package-json": "^1.42.1",
     "ts-jest": "^25.5.0",
     "tsd": "^0.11.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "vuepress": "^1.4.1",
+    "vuepress-plugin-fulltext-search": "^2.0.3"
   },
   "tsd": {
     "directory": "src"
