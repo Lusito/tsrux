@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { expectType } from "tsd";
+import { expectType, expectAssignable } from "tsd";
 
 import { actionCreator, Action, ActionCreator, AnyAction, ActionOf } from "./actionCreator";
 
@@ -34,6 +34,10 @@ expectType<{ type: "foo/bar/4"; payload: TestPayload; meta: TestMeta }>(placehol
 expectType<Action<string> | Action<string, any> | Action<string, any, any> | Action<string, undefined, any>>(
     placeholder as AnyAction
 );
+expectAssignable<AnyAction>(placeholder as Action1);
+expectAssignable<AnyAction>(placeholder as Action2);
+expectAssignable<AnyAction>(placeholder as Action3);
+expectAssignable<AnyAction>(placeholder as Action4);
 
 /**
  * Type ActionCreator should work correctly
