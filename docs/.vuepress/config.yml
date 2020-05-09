@@ -1,5 +1,6 @@
 title: tsrux
 description: Typesafe and painless action creators and reducers for redux.
+base: '/tsrux/'
 themeConfig:
   nav:
   - link: 'https://github.com/lusito/tsrux'
