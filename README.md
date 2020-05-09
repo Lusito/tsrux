@@ -17,6 +17,7 @@ The name stands for typesafe [redux](https://redux.js.org/), aside from the bloo
 - Extremely lightweight: 300 byte vs 7.7 kilobyte for [deox](https://bundlephobia.com/result?p=deox).
 - Deadsimple to use
 - No dependencies!
+- [Fully documented](https://lusito.github.io/tsrux/)
 - Automated [unit- and type tests](https://travis-ci.org/Lusito/tsrux) with 100% [code coverage](https://coveralls.io/github/Lusito/tsrux)
 - Liberal license: [zlib/libpng](https://github.com/Lusito/tsrux/blob/master/LICENSE)
 
