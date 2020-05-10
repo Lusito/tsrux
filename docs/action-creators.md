@@ -1,11 +1,3 @@
----
-tags: 
-  - actionCreator
-  - payload
-  - metadata
-  - type
----
-
 # Action Creators
 
 Action creators functions used to easily create actions.
