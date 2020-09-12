@@ -31,7 +31,7 @@ When using `mapReducers()`, you don't need to define any more types!
 
 - This function is used to create a reducer for multiple actions.
 - It receives the initial state and a callback.
-- The callback is used to set up action handlers, returned an array of action handlers.
+- The callback is used to set up action handlers, returns an array of action handlers.
 
 ```typescript
 export const todosReducer = mapReducers(initialState, (handle) => [
