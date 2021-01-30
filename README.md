@@ -1,4 +1,8 @@
-# tsrux
+# Deprecated
+
+**WARNING:** This project has moved to [@react-nano/tsrux](https://github.com/lusito/react-nano)
+
+## tsrux
 
 [![Build Status](https://flat.badgen.net/travis/lusito/tsrux/master?icon=travis&label=tests)](https://travis-ci.org/Lusito/tsrux)
 [![Code Coverage](https://flat.badgen.net/coveralls/c/github/Lusito/tsrux/master?icon=codecov)](https://coveralls.io/github/Lusito/tsrux)
